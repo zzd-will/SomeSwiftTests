@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hiersun.ecommerce.gb.weixin.dao.IWeixinAccountAccessDao" >
+	<resultMap id="BaseResultMap" type="com.hiersun.ecommerce.gb.weixin.model.WeixinAccountAccess" >
+	  <id property="accessId" column="access_id" />
+	  <result column="request_content" property="requestContent" jdbcType="VARCHAR" />
+	  <result column="request_time" property="requestTime" jdbcType="DATE" />
+	</resultMap>
+	<select id="getAccountAccessByValidationCode" resultMap="BaseResultMap">
+		select access_id, request_content, request_time
+		from gb_weixin_account_access
+		where user_open_id = #{userOpenId, jdbcType=VARCHAR} and response_content=#{verifyCode, jdbcType=VARCHAR} <![CDATA[ and TIMESTAMPDIFF(MINUTE, request_time ,now()) <= 3]]> and related_id is null
+		order by request_time desc limit 1
+	</select>
+	
+	<insert id="addWeixinAccountAccess" parameterType="com.hiersun.ecommerce.gb.weixin.model.WeixinAccountAccess">
+		insert into gb_weixin_account_access(user_open_id,request_id,request_content,request_category,request_time,
+		<if test="relatedAccessId!=null">
+			related_id,
+		</if>
+		response_content) 
+		values(
+			#{userOpenId},#{requestId},
+			#{requestContent},
+			#{requestCategory,typeHandler=org.apache.ibatis.type.EnumOrdinalTypeHandler},
+			#{requestTime},
+			<if test="relatedAccessId!=null">
+			#{relatedAccessId},
+			</if>
+			#{responseContent}
+		)
+		<selectKey resultType="long" keyProperty="accessId">
+			select last_insert_id() as value
+		</selectKey>
+	</insert>
+</mapper>

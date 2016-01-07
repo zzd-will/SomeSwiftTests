@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hiersun.ecommerce.gb.weixin.dao.IProductDao" >
+	<resultMap id="baseResultMap" type="com.hiersun.ecommerce.gb.weixin.model.Product" >
+	  <id property="productId" column="id" />
+	  <result column="pd_name" property="productName" jdbcType="VARCHAR" />
+	  <result column="pd_code" property="productCode" jdbcType="VARCHAR" />
+	  <result column="pd_type" property="productType"  typeHandler="com.hiersun.ecommerce.gb.weixin.model.typehandler.ProductTypeHandler" />
+	  <result column="pd_rate" property="yearRate" jdbcType="DECIMAL" />
+	  <result column="pd_day_rate" property="dayRate" jdbcType="DECIMAL" />
+	  <result column="pd_cycle_day" property="cycleDay" jdbcType="INTEGER" />
+	  <result column="deadline" property="deadline" jdbcType="VARCHAR" />
+	  <result column="start_weight" property="startWeight" jdbcType="VARCHAR" />
+	  <result column="start_date" property="startDate" jdbcType="DATE" />
+	  <result column="end_date" property="endDate" jdbcType="DATE" />
+	  <result column="pd_desc" property="description" jdbcType="VARCHAR" />
+	</resultMap>
+	<select id="getProductById" resultMap="baseResultMap" parameterType="long">
+		SELECT id, pd_name, pd_code, pd_type, pd_rate, pd_day_rate, pd_cycle_day, deadline, start_weight, 
+			start_date, end_date, pd_desc
+		FROM gb_product
+		where id=#{0} and deleted=0 and published=1
+	</select>
+	<select id="getAllProducts" resultMap="baseResultMap" resultType="List">
+		SELECT id, pd_name, pd_code, pd_type, pd_rate, pd_day_rate, pd_cycle_day, deadline, start_weight, 
+			start_date, end_date, pd_desc
+		FROM gb_product
+		where deleted=0  and published=1
+	</select>
+</mapper>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hiersun.ecommerce.gb.weixin.dao.IWeixinRequestDao" >
+	<insert id="addWeixinRequest" parameterType="com.hiersun.ecommerce.gb.weixin.model.WeixinRequest">
+		insert into gb_weixin_request(msg_id,msg_type,event_type,app_id,user_open_id,request_time,content) values
+		(#{msgId},#{msgType},#{msgEventType},#{appId},#{userOpenId},#{createTime},#{msgObjContent})
+		<selectKey resultType="long" keyProperty="requestId">
+			select last_insert_id() as value
+		</selectKey>
+	</insert>
+</mapper>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hiersun.ecommerce.gb.weixin.dao.IMemberInfoDao" >
+    <!-- 
+    <typeHandlers>
+       <typeHandler handler="com.hiersun.ecommerce.gb.weixin.model.enums。GenderHandler" javaType="com.hiersun.ecommerce.gb.weixin.model.enums.Gender"/>
+    </typeHandlers>
+ -->
+ 
+	<resultMap id="accountInfoResultMap" type="com.hiersun.ecommerce.gb.weixin.model.AccountInfo" >
+	  <id property="accountId" column="account_id" />
+	  <result column="contract_no" property="contractNo" jdbcType="VARCHAR" />
+	  <result column="contract_Date" property="contractDate" jdbcType="DATE" />
+	  <result column="start_increment_date" property="startIncrementDate" jdbcType="DATE" />
+	  <result column="end_increment_date" property="endIncrementDate" jdbcType="DATE" />
+	  <result column="member_id" property="memberId" jdbcType="INTEGER" />
+	  <result column="product_id" property="productId" jdbcType="INTEGER" />
+	  <result column="product_name" property="productName" jdbcType="VARCHAR" />
+	  <result column="origin_weight" property="originWeight" jdbcType="DECIMAL" />
+	  <result column="smelt_weight" property="smeltWeight" jdbcType="DECIMAL" />
+	  <result column="income_weight" property="currentSettledWeight" jdbcType="DECIMAL" />
+	  <result column="income_date" property="currentSettledDate" jdbcType="DATE" />
+	  <result column="status" property="status" jdbcType="INTEGER" />
+	  <result column="takeout_profit" property="takeoutProfit" jdbcType="DECIMAL" />
+	</resultMap>
+	
+	<resultMap id="memberResultMap" type="com.hiersun.ecommerce.gb.weixin.model.MemberInfo" >
+	  <id property="memberId" column="member_id" />
+	  <result column="nickName" property="nickName" jdbcType="VARCHAR" />
+	  <result column="phone" property="mobile" jdbcType="VARCHAR" />
+	  <result column="sex" property="gender" typeHandler="com.hiersun.ecommerce.gb.weixin.model.typehandler.GenderHandler" />
+	  <result column="name" property="userName" jdbcType="VARCHAR" />
+	  <result column="idcard" property="idCard" jdbcType="VARCHAR" />
+	  <!-- 将accountInfo list属性映射到collection -->
+	  <collection property="accountList" ofType="com.hiersun.ecommerce.gb.weixin.model.AccountInfo" resultMap="accountInfoResultMap"/>
+	</resultMap>
+	
+	<select id="getMemberInfoByMobile" resultMap="memberResultMap" parameterType="String">
+		select m.id as member_id,nickname,phone,sex,name,idcard,
+			s.id as account_id, contract_no, signed_time as contract_Date, start_date as start_increment_date, end_date as end_increment_date,
+				pd_id as product_id, pd_name as product_name, origin_weight, smelt_weight, income_weight, income_date, s.status, t.takeout_profit
+		from gb_member m
+		left join gb_signed s on m.id = s.member_id
+		left join gb_takeout t on t.sid = s.id
+		where m.phone=#{0} and m.enabled=1 and m.deleted=0 and s.deleted=0
+		order by s.id asc
+	</select>
+	<select id="getMemberInfoByIDCard" resultMap="memberResultMap" parameterType="String">	
+		select m.id as member_id,nickname,phone,sex,name,idcard,
+			s.id as account_id, contract_no, signed_time as contract_Date, start_date as start_increment_date, end_date as end_increment_date,
+				pd_id as product_id, pd_name as product_name, origin_weight, smelt_weight, income_weight, income_date, s.status, t.takeout_profit
+		from gb_member m
+		left join gb_signed s on m.id = s.member_id
+		left join gb_takeout t on t.sid = s.id
+		where idcard=#{0} and m.enabled=1 and m.deleted=0 and s.deleted=0
+		order by s.id asc
+	</select>
+</mapper>

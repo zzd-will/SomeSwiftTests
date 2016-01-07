@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hiersun.ecommerce.gb.weixin.dao.IShopDao" >
+	<resultMap id="baseResultMap" type="com.hiersun.ecommerce.gb.weixin.model.Shop" >
+	  <id property="shopId" column="id" />
+	  <result column="shop_name" property="shopName" jdbcType="VARCHAR" />
+	  <result column="location" property="address" jdbcType="VARCHAR" />
+	  <result column="contacts" property="contract" jdbcType="VARCHAR" />
+	  <result column="contact_tel" property="telephone" jdbcType="VARCHAR" />
+	  <result column="remark" property="remark" jdbcType="VARCHAR" />
+	</resultMap>
+	<select id="getAllShops" resultMap="baseResultMap" resultType="List">
+		SELECT id,shop_name,location,contacts,contact_tel,remark
+		FROM gb_shop
+		where deleted=0 and enabled=1
+	</select>
+</mapper>
