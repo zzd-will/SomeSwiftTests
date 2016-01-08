@@ -13,7 +13,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-         var order          = Order()
+  AliSwift.shareInstance.pay("24232324234", productName: "sdfsdf", productDes: "iiisdfsdf", amount: 0.013) { (CBResultDic) -> Void in
+     print("it's here")
+        }
+
     }
 
     override func didReceiveMemoryWarning() {

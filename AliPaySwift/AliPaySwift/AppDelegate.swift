@@ -40,6 +40,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
+        
+        //如果极简开发包不可用,会跳转支付宝钱包进行支付,需要将支付宝钱包的支付结果回传给开发包
+        if url.host == "safepay"
+        {
+            
+            AlipaySDK.defaultService().processOrderWithPaymentResult(url, standbyCallback: { (resultDic) -> Void in
+                print("result = \(resultDic)\n")
+            })
+            
+        }
+        
+        //支付宝钱包快登授权返回authCode
+        if url.host == "platformapi"
+        {
+            AlipaySDK.defaultService().processAuthResult(url, standbyCallback: { (resultDic) -> Void in
+                print("result = \(resultDic)\n")
+            })
+        }
+        
+    
 
 
 }

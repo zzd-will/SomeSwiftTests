@@ -34,6 +34,7 @@
 		0485AFB41C3E775D007AB096 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0485AFB21C3E775D007AB096 /* CoreText.framework */; };
 		0485AFB61C3E77A7007AB096 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0485AFB51C3E77A7007AB096 /* libc++.tbd */; };
 		0485AFB81C3E77AE007AB096 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0485AFB71C3E77AE007AB096 /* libz.tbd */; };
+		0485AFC01C3F47CC007AB096 /* AliSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0485AFBF1C3F47CC007AB096 /* AliSwift.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -175,6 +176,7 @@
 		0485AFB51C3E77A7007AB096 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		0485AFB71C3E77AE007AB096 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		0485AFBB1C3E792C007AB096 /* AliSDK-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AliSDK-Prefix.pch"; sourceTree = "<group>"; };
+		0485AFBF1C3F47CC007AB096 /* AliSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AliSwift.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +216,7 @@
 		0485AEF71C3E70E2007AB096 = {
 			isa = PBXGroup;
 			children = (
+				0485AFBE1C3F4719007AB096 /* AliSwiftUtils */,
 				0485AFAC1C3E76C6007AB096 /* Frameworks */,
 				0485AF351C3E714A007AB096 /* AliSDK */,
 				0485AF021C3E70E2007AB096 /* AliPaySwift */,
@@ -402,6 +405,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		0485AFBE1C3F4719007AB096 /* AliSwiftUtils */ = {
+			isa = PBXGroup;
+			children = (
+				0485AFBF1C3F47CC007AB096 /* AliSwift.swift */,
+			);
+			path = AliSwiftUtils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -538,6 +549,7 @@
 				0485AFA21C3E714A007AB096 /* base64.m in Sources */,
 				0485AF061C3E70E2007AB096 /* ViewController.swift in Sources */,
 				0485AFA61C3E714A007AB096 /* NSDataEx.m in Sources */,
+				0485AFC01C3F47CC007AB096 /* AliSwift.swift in Sources */,
 				0485AFA51C3E714A007AB096 /* MD5DataSigner.m in Sources */,
 				0485AFA91C3E714A007AB096 /* RSADataVerifier.m in Sources */,
 				0485AF9E1C3E714A007AB096 /* APAuthV2Info.m in Sources */,
