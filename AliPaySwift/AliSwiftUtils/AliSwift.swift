@@ -5,20 +5,35 @@
 //  Created by mac on 16/1/8.
 //  Copyright © 2016年 planning. All rights reserved.
 //
+//  zzd ali swift
+// 道生一
 
 import Foundation
 
+public struct AliReCode{
+    // 订单支付成功
+    public static let SUCCESS:String =  "9000"
+    // 正在处理中
+    public static let DOING:String =  "8000"
+    // 订单支付失败
+    public static let FAILED:String =  "4000"
+    // 用户中途取消
+    public static let CANCELED:String =  "6001"
+    // 网络连接出错
+    public static let NETFAILED:String =  "6002"
+}
+
 private struct AliParam{
     // 商户PID
-    private static let PARTNER:String = "2083485658";
+    private static let PARTNER:String = "2088121543485658";
     // 商户收款账号
-    private static let SELLER:String = "hxdddd@hiersun.com";
+    private static let SELLER:String = "hxktcaiwu@hiersun.com";
     // 商户私钥，pkcs8格式
-    private static let RSA_PRIVATE:String = "MIICdgIBAD";
+    private static let RSA_PRIVATE:String = "MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBALg9Pi/ZpZy7oyIZFLkvL4Ng3k3zdignA3KgZylZq99pwStVydfauQELrEgALrnahbZlPZ4MonK/m7XknYArYDvujYRBaT5Um28s7waaCQBDdk7ALuNgLvLUttXfl8nJH/vtbxtbCE4ynpWdixl00d5+eDmDGey5WGMIdjED5BDPAgMBAAECgYEAmFTy1QeE2kl+gZPxQYhVJbBzPkp9uIdBX4ZmpZbh+BBtylHdWN8ctlObd9DG0Z5vjja5MrPJoUzyBvvmifHTV3F14t1zZ0KfJ+yYXoyT/USRPlv9/SROcBk/j/cdp8WPFXXL29j0TzcjufL95RLrY17yp2xzlbQ2jvI2s9vbFzECQQDveOViK9GbYX9veacQvnmQx3IW5p9bpkGHVOhAPuqAPEm0TwVLDfz1Jt/wDlRmVyaebEOj4cGfHDH+tOWSClMZAkEAxPR3BTHAixrdyxd3S6KqOQJKRnS/?==";
     // 支付宝公钥
-    private static let  RSA_PUBLIC:String = "MIGfMA0GCSqGS";
+    private static let  RSA_PUBLIC:String = "*************";
     //回调服务URL
-    private  static let ALIPAY_CALLBACK:String = "http://pay.gb.xxx.com/alipay/paycallback";
+    private  static let ALIPAY_CALLBACK:String = "http://pay.gb.hiersun.com/alipay/paycallback";
     // 应用注册scheme,在Info.plist定义URL types
     private  static let  ALIURLSCHEME:String = "DiamondAliPay"
     // 签名方式,目前只有"RSA"
@@ -43,7 +58,7 @@ class AliSwift{
     private init(){
     }
     
-    func pay(tradeNO:String,productName:String,productDes:String,amount:Float,callBack:(CBResultDic:NSDictionary)->Void){
+    func pay(tradeNO:String,productName:String,amount:Float,productDes:String = "",callBack:(CBResultDic:NSDictionary)->Void){
     
         let order          = Order()
         order.partner      = AliParam.PARTNER
@@ -72,7 +87,7 @@ class AliSwift{
         
         //将商品信息拼接成字符串
         let orderSpec      = order.description
-        print("orderSpec:\(orderSpec)\n")
+//        print("orderSpec:\(orderSpec)\n")
         
         //获取私钥并将商户信息签名,外部商户可以根据情况存放私钥和签名,只需要遵循RSA签名规范,并将签名字符串base64编码和UrlEncode
         let signer = CreateRSADataSigner(AliParam.RSA_PRIVATE)
@@ -83,10 +98,6 @@ class AliSwift{
             
             orderString = "\(orderSpec)&sign=\"\(signedString)\"&sign_type=\"RSA\""
             AlipaySDK.defaultService().payOrder(orderString, fromScheme: AliParam.ALIURLSCHEME, callback: { (resultDic) -> Void in
-                let memo = resultDic["memo"] as! String
-                let result = resultDic["result"] as! String
-                let resultStatus = resultDic["resultStatus"] as! String
-                print("memo = %@, result = %@, resultStatus:%@",memo,result,resultStatus)
                 callBack(CBResultDic: resultDic)
             })
             
