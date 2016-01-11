@@ -1,0 +1,648 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0417CEC01C435B3F008A20DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0417CEBF1C435B3F008A20DF /* AppDelegate.swift */; };
+		0417CEC21C435B3F008A20DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0417CEC11C435B3F008A20DF /* ViewController.swift */; };
+		0417CEC51C435B3F008A20DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0417CEC31C435B3F008A20DF /* Main.storyboard */; };
+		0417CEC71C435B3F008A20DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0417CEC61C435B3F008A20DF /* Assets.xcassets */; };
+		0417CECA1C435B3F008A20DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0417CEC81C435B3F008A20DF /* LaunchScreen.storyboard */; };
+		0417CED51C435B3F008A20DF /* WXPaySwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0417CED41C435B3F008A20DF /* WXPaySwiftTests.swift */; };
+		0417CEE01C435B3F008A20DF /* WXPaySwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0417CEDF1C435B3F008A20DF /* WXPaySwiftUITests.swift */; };
+		0417CF071C435BE3008A20DF /* WXApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417CEF41C435BE3008A20DF /* WXApiManager.m */; };
+		0417CF081C435BE3008A20DF /* WXApiRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417CEF61C435BE3008A20DF /* WXApiRequestHandler.m */; };
+		0417CF091C435BE3008A20DF /* WXApiResponseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417CEF81C435BE3008A20DF /* WXApiResponseHandler.m */; };
+		0417CF0A1C435BE3008A20DF /* GetMessageFromWXResp+responseWithTextOrMediaMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417CEFC1C435BE3008A20DF /* GetMessageFromWXResp+responseWithTextOrMediaMessage.m */; };
+		0417CF0B1C435BE3008A20DF /* SendMessageToWXReq+requestWithTextOrMediaMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417CEFE1C435BE3008A20DF /* SendMessageToWXReq+requestWithTextOrMediaMessage.m */; };
+		0417CF0C1C435BE3008A20DF /* WXMediaMessage+messageConstruct.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417CF001C435BE3008A20DF /* WXMediaMessage+messageConstruct.m */; };
+		0417CF0D1C435BE3008A20DF /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0417CF011C435BE3008A20DF /* libWeChatSDK.a */; };
+		0417CF0E1C435BE3008A20DF /* read_me.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0417CF021C435BE3008A20DF /* read_me.txt */; };
+		0417CF111C437656008A20DF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0417CF101C437656008A20DF /* UIKit.framework */; };
+		0417CF131C437664008A20DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0417CF121C437664008A20DF /* Foundation.framework */; };
+		0417CF151C437675008A20DF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0417CF141C437675008A20DF /* SystemConfiguration.framework */; };
+		0417CF171C437680008A20DF /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0417CF161C437680008A20DF /* CoreTelephony.framework */; };
+		0417CF191C437691008A20DF /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0417CF181C437691008A20DF /* libz.tbd */; };
+		0417CF1B1C43769D008A20DF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0417CF1A1C43769D008A20DF /* Security.framework */; };
+		0417CF1D1C437E42008A20DF /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0417CF1C1C437E42008A20DF /* libsqlite3.0.tbd */; };
+		0417CF1F1C437E5E008A20DF /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0417CF1E1C437E5E008A20DF /* libc++.tbd */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0417CED11C435B3F008A20DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0417CEB41C435B3F008A20DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0417CEBB1C435B3F008A20DF;
+			remoteInfo = WXPaySwift;
+		};
+		0417CEDC1C435B3F008A20DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0417CEB41C435B3F008A20DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0417CEBB1C435B3F008A20DF;
+			remoteInfo = WXPaySwift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0417CEBC1C435B3F008A20DF /* WXPaySwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WXPaySwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0417CEBF1C435B3F008A20DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0417CEC11C435B3F008A20DF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0417CEC41C435B3F008A20DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0417CEC61C435B3F008A20DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0417CEC91C435B3F008A20DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0417CECB1C435B3F008A20DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0417CED01C435B3F008A20DF /* WXPaySwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WXPaySwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0417CED41C435B3F008A20DF /* WXPaySwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WXPaySwiftTests.swift; sourceTree = "<group>"; };
+		0417CED61C435B3F008A20DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0417CEDB1C435B3F008A20DF /* WXPaySwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WXPaySwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0417CEDF1C435B3F008A20DF /* WXPaySwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WXPaySwiftUITests.swift; sourceTree = "<group>"; };
+		0417CEE11C435B3F008A20DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0417CEED1C435B68008A20DF /* WXPaySwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WXPaySwift-Bridging-Header.h"; sourceTree = "<group>"; };
+		0417CEF31C435BE3008A20DF /* WXApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiManager.h; sourceTree = "<group>"; };
+		0417CEF41C435BE3008A20DF /* WXApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXApiManager.m; sourceTree = "<group>"; };
+		0417CEF51C435BE3008A20DF /* WXApiRequestHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiRequestHandler.h; sourceTree = "<group>"; };
+		0417CEF61C435BE3008A20DF /* WXApiRequestHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXApiRequestHandler.m; sourceTree = "<group>"; };
+		0417CEF71C435BE3008A20DF /* WXApiResponseHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiResponseHandler.h; sourceTree = "<group>"; };
+		0417CEF81C435BE3008A20DF /* WXApiResponseHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXApiResponseHandler.m; sourceTree = "<group>"; };
+		0417CEFA1C435BE3008A20DF /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		0417CEFB1C435BE3008A20DF /* GetMessageFromWXResp+responseWithTextOrMediaMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GetMessageFromWXResp+responseWithTextOrMediaMessage.h"; sourceTree = "<group>"; };
+		0417CEFC1C435BE3008A20DF /* GetMessageFromWXResp+responseWithTextOrMediaMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GetMessageFromWXResp+responseWithTextOrMediaMessage.m"; sourceTree = "<group>"; };
+		0417CEFD1C435BE3008A20DF /* SendMessageToWXReq+requestWithTextOrMediaMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SendMessageToWXReq+requestWithTextOrMediaMessage.h"; sourceTree = "<group>"; };
+		0417CEFE1C435BE3008A20DF /* SendMessageToWXReq+requestWithTextOrMediaMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SendMessageToWXReq+requestWithTextOrMediaMessage.m"; sourceTree = "<group>"; };
+		0417CEFF1C435BE3008A20DF /* WXMediaMessage+messageConstruct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WXMediaMessage+messageConstruct.h"; sourceTree = "<group>"; };
+		0417CF001C435BE3008A20DF /* WXMediaMessage+messageConstruct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WXMediaMessage+messageConstruct.m"; sourceTree = "<group>"; };
+		0417CF011C435BE3008A20DF /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		0417CF021C435BE3008A20DF /* read_me.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = read_me.txt; sourceTree = "<group>"; };
+		0417CF031C435BE3008A20DF /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
+		0417CF041C435BE3008A20DF /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		0417CF051C435BE3008A20DF /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		0417CF101C437656008A20DF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0417CF121C437664008A20DF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0417CF141C437675008A20DF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		0417CF161C437680008A20DF /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		0417CF181C437691008A20DF /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		0417CF1A1C43769D008A20DF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		0417CF1C1C437E42008A20DF /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		0417CF1E1C437E5E008A20DF /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0417CEB91C435B3F008A20DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0417CF1F1C437E5E008A20DF /* libc++.tbd in Frameworks */,
+				0417CF1D1C437E42008A20DF /* libsqlite3.0.tbd in Frameworks */,
+				0417CF1B1C43769D008A20DF /* Security.framework in Frameworks */,
+				0417CF191C437691008A20DF /* libz.tbd in Frameworks */,
+				0417CF171C437680008A20DF /* CoreTelephony.framework in Frameworks */,
+				0417CF151C437675008A20DF /* SystemConfiguration.framework in Frameworks */,
+				0417CF131C437664008A20DF /* Foundation.framework in Frameworks */,
+				0417CF111C437656008A20DF /* UIKit.framework in Frameworks */,
+				0417CF0D1C435BE3008A20DF /* libWeChatSDK.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0417CECD1C435B3F008A20DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0417CED81C435B3F008A20DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0417CEB31C435B3F008A20DF = {
+			isa = PBXGroup;
+			children = (
+				0417CF471C4385BB008A20DF /* Framworks */,
+				0417CEF11C435BE3008A20DF /* WXSDK */,
+				0417CF061C435BE3008A20DF /* WXSwiftUtils */,
+				0417CEBE1C435B3F008A20DF /* WXPaySwift */,
+				0417CED31C435B3F008A20DF /* WXPaySwiftTests */,
+				0417CEDE1C435B3F008A20DF /* WXPaySwiftUITests */,
+				0417CEBD1C435B3F008A20DF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0417CEBD1C435B3F008A20DF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0417CEBC1C435B3F008A20DF /* WXPaySwift.app */,
+				0417CED01C435B3F008A20DF /* WXPaySwiftTests.xctest */,
+				0417CEDB1C435B3F008A20DF /* WXPaySwiftUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0417CEBE1C435B3F008A20DF /* WXPaySwift */ = {
+			isa = PBXGroup;
+			children = (
+				0417CEBF1C435B3F008A20DF /* AppDelegate.swift */,
+				0417CEC11C435B3F008A20DF /* ViewController.swift */,
+				0417CEC31C435B3F008A20DF /* Main.storyboard */,
+				0417CEC61C435B3F008A20DF /* Assets.xcassets */,
+				0417CEC81C435B3F008A20DF /* LaunchScreen.storyboard */,
+				0417CECB1C435B3F008A20DF /* Info.plist */,
+				0417CEED1C435B68008A20DF /* WXPaySwift-Bridging-Header.h */,
+			);
+			path = WXPaySwift;
+			sourceTree = "<group>";
+		};
+		0417CED31C435B3F008A20DF /* WXPaySwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				0417CED41C435B3F008A20DF /* WXPaySwiftTests.swift */,
+				0417CED61C435B3F008A20DF /* Info.plist */,
+			);
+			path = WXPaySwiftTests;
+			sourceTree = "<group>";
+		};
+		0417CEDE1C435B3F008A20DF /* WXPaySwiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0417CEDF1C435B3F008A20DF /* WXPaySwiftUITests.swift */,
+				0417CEE11C435B3F008A20DF /* Info.plist */,
+			);
+			path = WXPaySwiftUITests;
+			sourceTree = "<group>";
+		};
+		0417CEF11C435BE3008A20DF /* WXSDK */ = {
+			isa = PBXGroup;
+			children = (
+				0417CEF21C435BE3008A20DF /* Control */,
+				0417CEF91C435BE3008A20DF /* Helper */,
+				0417CF011C435BE3008A20DF /* libWeChatSDK.a */,
+				0417CF021C435BE3008A20DF /* read_me.txt */,
+				0417CF031C435BE3008A20DF /* WechatAuthSDK.h */,
+				0417CF041C435BE3008A20DF /* WXApi.h */,
+				0417CF051C435BE3008A20DF /* WXApiObject.h */,
+			);
+			path = WXSDK;
+			sourceTree = "<group>";
+		};
+		0417CEF21C435BE3008A20DF /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				0417CEF31C435BE3008A20DF /* WXApiManager.h */,
+				0417CEF41C435BE3008A20DF /* WXApiManager.m */,
+				0417CEF51C435BE3008A20DF /* WXApiRequestHandler.h */,
+				0417CEF61C435BE3008A20DF /* WXApiRequestHandler.m */,
+				0417CEF71C435BE3008A20DF /* WXApiResponseHandler.h */,
+				0417CEF81C435BE3008A20DF /* WXApiResponseHandler.m */,
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
+		0417CEF91C435BE3008A20DF /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				0417CEFA1C435BE3008A20DF /* Constant.h */,
+				0417CEFB1C435BE3008A20DF /* GetMessageFromWXResp+responseWithTextOrMediaMessage.h */,
+				0417CEFC1C435BE3008A20DF /* GetMessageFromWXResp+responseWithTextOrMediaMessage.m */,
+				0417CEFD1C435BE3008A20DF /* SendMessageToWXReq+requestWithTextOrMediaMessage.h */,
+				0417CEFE1C435BE3008A20DF /* SendMessageToWXReq+requestWithTextOrMediaMessage.m */,
+				0417CEFF1C435BE3008A20DF /* WXMediaMessage+messageConstruct.h */,
+				0417CF001C435BE3008A20DF /* WXMediaMessage+messageConstruct.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		0417CF061C435BE3008A20DF /* WXSwiftUtils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = WXSwiftUtils;
+			sourceTree = "<group>";
+		};
+		0417CF471C4385BB008A20DF /* Framworks */ = {
+			isa = PBXGroup;
+			children = (
+				0417CF1E1C437E5E008A20DF /* libc++.tbd */,
+				0417CF1C1C437E42008A20DF /* libsqlite3.0.tbd */,
+				0417CF1A1C43769D008A20DF /* Security.framework */,
+				0417CF181C437691008A20DF /* libz.tbd */,
+				0417CF161C437680008A20DF /* CoreTelephony.framework */,
+				0417CF141C437675008A20DF /* SystemConfiguration.framework */,
+				0417CF121C437664008A20DF /* Foundation.framework */,
+				0417CF101C437656008A20DF /* UIKit.framework */,
+			);
+			name = Framworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0417CEBB1C435B3F008A20DF /* WXPaySwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0417CEE41C435B3F008A20DF /* Build configuration list for PBXNativeTarget "WXPaySwift" */;
+			buildPhases = (
+				0417CEB81C435B3F008A20DF /* Sources */,
+				0417CEB91C435B3F008A20DF /* Frameworks */,
+				0417CEBA1C435B3F008A20DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WXPaySwift;
+			productName = WXPaySwift;
+			productReference = 0417CEBC1C435B3F008A20DF /* WXPaySwift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0417CECF1C435B3F008A20DF /* WXPaySwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0417CEE71C435B3F008A20DF /* Build configuration list for PBXNativeTarget "WXPaySwiftTests" */;
+			buildPhases = (
+				0417CECC1C435B3F008A20DF /* Sources */,
+				0417CECD1C435B3F008A20DF /* Frameworks */,
+				0417CECE1C435B3F008A20DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0417CED21C435B3F008A20DF /* PBXTargetDependency */,
+			);
+			name = WXPaySwiftTests;
+			productName = WXPaySwiftTests;
+			productReference = 0417CED01C435B3F008A20DF /* WXPaySwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0417CEDA1C435B3F008A20DF /* WXPaySwiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0417CEEA1C435B3F008A20DF /* Build configuration list for PBXNativeTarget "WXPaySwiftUITests" */;
+			buildPhases = (
+				0417CED71C435B3F008A20DF /* Sources */,
+				0417CED81C435B3F008A20DF /* Frameworks */,
+				0417CED91C435B3F008A20DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0417CEDD1C435B3F008A20DF /* PBXTargetDependency */,
+			);
+			name = WXPaySwiftUITests;
+			productName = WXPaySwiftUITests;
+			productReference = 0417CEDB1C435B3F008A20DF /* WXPaySwiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0417CEB41C435B3F008A20DF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = planning;
+				TargetAttributes = {
+					0417CEBB1C435B3F008A20DF = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					0417CECF1C435B3F008A20DF = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 0417CEBB1C435B3F008A20DF;
+					};
+					0417CEDA1C435B3F008A20DF = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 0417CEBB1C435B3F008A20DF;
+					};
+				};
+			};
+			buildConfigurationList = 0417CEB71C435B3F008A20DF /* Build configuration list for PBXProject "WXPaySwift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0417CEB31C435B3F008A20DF;
+			productRefGroup = 0417CEBD1C435B3F008A20DF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0417CEBB1C435B3F008A20DF /* WXPaySwift */,
+				0417CECF1C435B3F008A20DF /* WXPaySwiftTests */,
+				0417CEDA1C435B3F008A20DF /* WXPaySwiftUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0417CEBA1C435B3F008A20DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0417CECA1C435B3F008A20DF /* LaunchScreen.storyboard in Resources */,
+				0417CEC71C435B3F008A20DF /* Assets.xcassets in Resources */,
+				0417CF0E1C435BE3008A20DF /* read_me.txt in Resources */,
+				0417CEC51C435B3F008A20DF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0417CECE1C435B3F008A20DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0417CED91C435B3F008A20DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0417CEB81C435B3F008A20DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0417CF0B1C435BE3008A20DF /* SendMessageToWXReq+requestWithTextOrMediaMessage.m in Sources */,
+				0417CF081C435BE3008A20DF /* WXApiRequestHandler.m in Sources */,
+				0417CF071C435BE3008A20DF /* WXApiManager.m in Sources */,
+				0417CEC21C435B3F008A20DF /* ViewController.swift in Sources */,
+				0417CEC01C435B3F008A20DF /* AppDelegate.swift in Sources */,
+				0417CF091C435BE3008A20DF /* WXApiResponseHandler.m in Sources */,
+				0417CF0A1C435BE3008A20DF /* GetMessageFromWXResp+responseWithTextOrMediaMessage.m in Sources */,
+				0417CF0C1C435BE3008A20DF /* WXMediaMessage+messageConstruct.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0417CECC1C435B3F008A20DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0417CED51C435B3F008A20DF /* WXPaySwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0417CED71C435B3F008A20DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0417CEE01C435B3F008A20DF /* WXPaySwiftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0417CED21C435B3F008A20DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0417CEBB1C435B3F008A20DF /* WXPaySwift */;
+			targetProxy = 0417CED11C435B3F008A20DF /* PBXContainerItemProxy */;
+		};
+		0417CEDD1C435B3F008A20DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0417CEBB1C435B3F008A20DF /* WXPaySwift */;
+			targetProxy = 0417CEDC1C435B3F008A20DF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0417CEC31C435B3F008A20DF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0417CEC41C435B3F008A20DF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0417CEC81C435B3F008A20DF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0417CEC91C435B3F008A20DF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0417CEE21C435B3F008A20DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0417CEE31C435B3F008A20DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0417CEE51C435B3F008A20DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/WXPaySwift/WXPaySwift-Bridging-Header.h";
+				INFOPLIST_FILE = WXPaySwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WXSDK",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.planning.WXPaySwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/WXPaySwift/WXPaySwift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0417CEE61C435B3F008A20DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/WXPaySwift/WXPaySwift-Bridging-Header.h";
+				INFOPLIST_FILE = WXPaySwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WXSDK",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.planning.WXPaySwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/WXPaySwift/WXPaySwift-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		0417CEE81C435B3F008A20DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WXPaySwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.planning.WXPaySwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WXPaySwift.app/WXPaySwift";
+			};
+			name = Debug;
+		};
+		0417CEE91C435B3F008A20DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WXPaySwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.planning.WXPaySwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WXPaySwift.app/WXPaySwift";
+			};
+			name = Release;
+		};
+		0417CEEB1C435B3F008A20DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = WXPaySwiftUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.planning.WXPaySwiftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = WXPaySwift;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		0417CEEC1C435B3F008A20DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = WXPaySwiftUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.planning.WXPaySwiftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = WXPaySwift;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0417CEB71C435B3F008A20DF /* Build configuration list for PBXProject "WXPaySwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0417CEE21C435B3F008A20DF /* Debug */,
+				0417CEE31C435B3F008A20DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0417CEE41C435B3F008A20DF /* Build configuration list for PBXNativeTarget "WXPaySwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0417CEE51C435B3F008A20DF /* Debug */,
+				0417CEE61C435B3F008A20DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0417CEE71C435B3F008A20DF /* Build configuration list for PBXNativeTarget "WXPaySwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0417CEE81C435B3F008A20DF /* Debug */,
+				0417CEE91C435B3F008A20DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0417CEEA1C435B3F008A20DF /* Build configuration list for PBXNativeTarget "WXPaySwiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0417CEEB1C435B3F008A20DF /* Debug */,
+				0417CEEC1C435B3F008A20DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0417CEB41C435B3F008A20DF /* Project object */;
+}
