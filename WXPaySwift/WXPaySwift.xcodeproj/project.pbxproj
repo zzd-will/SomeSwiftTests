@@ -30,6 +30,7 @@
 		0417CF1B1C43769D008A20DF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0417CF1A1C43769D008A20DF /* Security.framework */; };
 		0417CF1D1C437E42008A20DF /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0417CF1C1C437E42008A20DF /* libsqlite3.0.tbd */; };
 		0417CF1F1C437E5E008A20DF /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0417CF1E1C437E5E008A20DF /* libc++.tbd */; };
+		04A249D51C43B3D400129D3B /* WXSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A249D41C43B3D400129D3B /* WXSwift.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		0417CF1A1C43769D008A20DF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		0417CF1C1C437E42008A20DF /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		0417CF1E1C437E5E008A20DF /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		04A249D41C43B3D400129D3B /* WXSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WXSwift.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +227,7 @@
 		0417CF061C435BE3008A20DF /* WXSwiftUtils */ = {
 			isa = PBXGroup;
 			children = (
+				04A249D41C43B3D400129D3B /* WXSwift.swift */,
 			);
 			path = WXSwiftUtils;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				0417CEC21C435B3F008A20DF /* ViewController.swift in Sources */,
 				0417CEC01C435B3F008A20DF /* AppDelegate.swift in Sources */,
 				0417CF091C435BE3008A20DF /* WXApiResponseHandler.m in Sources */,
+				04A249D51C43B3D400129D3B /* WXSwift.swift in Sources */,
 				0417CF0A1C435BE3008A20DF /* GetMessageFromWXResp+responseWithTextOrMediaMessage.m in Sources */,
 				0417CF0C1C435BE3008A20DF /* WXMediaMessage+messageConstruct.m in Sources */,
 			);
@@ -625,6 +629,7 @@
 				0417CEE61C435B3F008A20DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0417CEE71C435B3F008A20DF /* Build configuration list for PBXNativeTarget "WXPaySwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -633,6 +638,7 @@
 				0417CEE91C435B3F008A20DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0417CEEA1C435B3F008A20DF /* Build configuration list for PBXNativeTarget "WXPaySwiftUITests" */ = {
 			isa = XCConfigurationList;
@@ -641,6 +647,7 @@
 				0417CEEC1C435B3F008A20DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

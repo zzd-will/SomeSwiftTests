@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,WXApiManagerDelegate {
 //        [WXApi registerApp:@"wxb4ba3c02aa476ea1" withDescription:@"demo 2.0"];
         WXApi.registerApp("wxb4ba3c02aa476ea1",withDescription: "demo" )
         WXApiManager.sharedManager().delegate = self
+        
         return true
     }
 
