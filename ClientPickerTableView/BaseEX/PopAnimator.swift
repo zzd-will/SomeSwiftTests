@@ -26,9 +26,11 @@ class PopAnimator: NSObject,UIViewControllerAnimatedTransitioning {
         let toView = transitionContext.viewForKey(UITransitionContextToViewKey)
         containerView!.addSubview(toView!)
         toView!.alpha = 0.0
+        toView?.backgroundColor = UIColor.blackColor()
         UIView.animateWithDuration(duration,
             animations: {
                 toView!.alpha = 1.0
+                toView?.backgroundColor = UIColor.yellowColor()
             }, completion: { _ in
                 transitionContext.completeTransition(true)
         })
