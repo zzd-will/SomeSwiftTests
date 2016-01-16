@@ -216,7 +216,7 @@ class CSPageViewController: UIViewController, UIPageViewControllerDataSource, UI
         
         tabScrollView.autoresizingMask = .FlexibleWidth
         
-        let pagerFrame = CGRect(x: 0, y: 0, width: view.bounds.size.width, height: view.bounds.size.height)
+        let pagerFrame = CGRect(x: 0, y: tabbarFrame.size.height + tabbar.frame.origin.y, width: view.bounds.size.width, height: view.bounds.size.height)
         
         pager.view.frame = pagerFrame
     }
@@ -514,11 +514,11 @@ class CSPageViewController: UIViewController, UIPageViewControllerDataSource, UI
     
     private func updatePager(index: Int) {
         if let vc: UIViewController = viewControllerAtIndex(index) {
-            if index == currentPageIndex {
-                pager.setViewControllers([vc], direction: .Forward, animated: false, completion: { [weak self] (Bool) -> Void in
-                    self?.animatingToTab = false
-                })
-            } else if !(index + 1 == currentPageIndex || index - 1 == currentPageIndex) {
+//            if index == currentPageIndex {
+//                pager.setViewControllers([vc], direction: .Forward, animated: false, completion: { [weak self] (Bool) -> Void in
+//                    self?.animatingToTab = false
+//                })
+//            } else if !(index + 1 == currentPageIndex || index - 1 == currentPageIndex) {
                 pager.setViewControllers([vc], direction: index < currentPageIndex ? .Reverse : .Forward, animated: true, completion: { [unowned self] (Bool) -> Void in
                     self.animatingToTab = false
                     
@@ -526,11 +526,11 @@ class CSPageViewController: UIViewController, UIPageViewControllerDataSource, UI
                         self.pager.setViewControllers([vc], direction: index < self.currentPageIndex ? .Reverse : .Forward, animated: false, completion: nil)
                     })
                 })
-            } else {
-                pager.setViewControllers([vc], direction: index < currentPageIndex ? .Reverse : .Forward, animated: true, completion: { [weak self] (Bool) -> Void in
-                    self?.animatingToTab = false
-                })
-            }
+//            } else {
+//                pager.setViewControllers([vc], direction: index < currentPageIndex ? .Reverse : .Forward, animated: true, completion: { [weak self] (Bool) -> Void in
+//                    self?.animatingToTab = false
+//                })
+//            }
             
             currentPageIndex = index
         }

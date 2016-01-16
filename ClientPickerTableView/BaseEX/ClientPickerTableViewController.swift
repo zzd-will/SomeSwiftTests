@@ -43,7 +43,9 @@ class ClientPickerTableViewController: UITableViewController {
         refreshControl?.addTarget(self, action: "refresh", forControlEvents: UIControlEvents.ValueChanged)
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: "cancel")
         tableView.registerClass(ClientPickerTableViewHeaderCell.self, forCellReuseIdentifier: ClientPickerTableViewHeaderCell.CellIdentifier)
+        
         tableView.registerClass(ClientPickerTableViewCell.self, forCellReuseIdentifier: ClientPickerTableViewCell.CellIdentifier)
+        
         tableView.registerClass(ClientPickerNoClientsTableViewCell.self, forCellReuseIdentifier: ClientPickerNoClientsTableViewCell.CellIdentifier)
         tableView.tableFooterView = UIView(frame: CGRectZero)
     }
@@ -93,6 +95,7 @@ class ClientPickerTableViewController: UITableViewController {
                 cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "ClientCell")
             }
         }
+        
         
         return cell
     }
@@ -193,7 +196,7 @@ class ClientPickerTableViewCell: UITableViewCell {
     var nameLabel: UILabel
     var checked: Bool = false {
         didSet {
-            self.accessoryType = checked ? UITableViewCellAccessoryType.Checkmark : UITableViewCellAccessoryType.None
+            self.accessoryType = checked ? UITableViewCellAccessoryType.DisclosureIndicator : UITableViewCellAccessoryType.None
         }
     }
     
@@ -212,7 +215,7 @@ class ClientPickerTableViewCell: UITableViewCell {
         nameLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
         self.tintColor = ClientPickerTableViewControllerUX.DeviceRowTintColor
         self.preservesSuperviewLayoutMargins = false
-        self.selectionStyle = UITableViewCellSelectionStyle.None
+        self.selectionStyle = UITableViewCellSelectionStyle.Default
     }
     
     override func layoutSubviews() {

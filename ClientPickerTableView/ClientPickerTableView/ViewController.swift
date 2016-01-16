@@ -15,11 +15,23 @@ class ViewController: UIViewController, ClientPickerTableViewControllerDelegate,
     let transition = PopAnimator()
     @IBAction func Client(sender: AnyObject) {
         
+//        showInstructionsView()
+        showClintPickerTableView()
+    }
+    
+    func showInstructionsView(){
         let instructionsViewController = InstructionsViewController()
         instructionsViewController.delegate = self
         let navigationController = UINavigationController(rootViewController: instructionsViewController)
         navigationController.transitioningDelegate = self
         presentViewController(navigationController, animated: true, completion: nil)
+        
+    }
+    func showClintPickerTableView(){
+        let clientPickerViewController = ClientPickerTableViewController()
+        clientPickerViewController.clientPickerDelegate = self
+        let navigationController = UINavigationController(rootViewController: clientPickerViewController)
+        self.presentViewController(navigationController, animated: false, completion: nil)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
